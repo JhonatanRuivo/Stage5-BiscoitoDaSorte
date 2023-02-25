@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --ff-heading: "Montserrat", sans-serif;
+    --ff-texting: "DM Sans", sans-serif;
+
+    font-size: 62.5%;
+    --fs-title: 2.4rem;
+    --fs-texting: 1.5rem;
+}
+
+body {
+    background: linear-gradient(45deg, #190361 0%, #bb00ff 100%);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+div {
+    background: #ffffff;
+    color: #34355b;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    width: 42.8rem;
+    padding: 6.4rem;
+    gap: 1.5rem;
+}
+h1 {
+    font-size: var(--fs-title);
+    font-family: var(--ff-heading);
+}
+p {
+    font-size: var(--fs-texting);
+    font-family: var(--ff-texting);
+}
+
+/* SCREEN1 */
+.screen1 img {
+    cursor: pointer;
+}
+.screen1 img:hover {
+    scale: 1.1;
+    transition: 400ms;
+}
+
+/* SCREEN2 */
+.screen2 {
+    animation: viewScreenTwo 3000ms;
+}
+.screen2 img#luck {
+  margin-top: 3rem;
+  animation: downtop 2000ms;
+}
+.screen2 button {
+    cursor: pointer;
+    margin: auto;
+    height: 5.2rem;
+    width: 17.4rem;
+
+    background-color: rgba(255, 149, 0, 1);
+    color: #ffffff;
+
+    border-radius: 0.4rem;
+    border: none;
+}
+.screen2 button:hover {
+    background-color: rgb(235, 138, 2);
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(70rem);
+    scale: 0%;
+  }
+  20% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    scale: 100%;
+  }
+}
+@keyframes viewScreenTwo {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
